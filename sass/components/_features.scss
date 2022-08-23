@@ -1,0 +1,104 @@
+.features {
+    width: 100%;
+    padding-top: 94px;
+    &__list {
+        &--item {
+            list-style: none;
+        }
+    }
+}
+
+.feature {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    &__icon {
+        padding: 25px 100px;
+        background: $advIconBox;
+        border-radius: 4px;
+    }
+    &__title {
+        font-weight: 700;
+        line-height: 1.41;
+        text-transform: uppercase;
+        margin-top: 30px;
+        color: $advTitle;
+    }
+    &__desc {
+        margin-top: 10px;
+        line-height: 1.71;
+        color: $advDesc;
+    }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 767px) {
+    .features {
+        padding-top: 60px;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        &__icon {
+            display: flex;
+            justify-content: center;
+        }
+        &__title {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .features {
+        padding-top: 60px;
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            &--item {
+                flex-basis: calc((100% - 30px) / 2);
+            }
+        }
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        &__icon {
+            display: flex;
+            justify-content: center;
+        }
+        &__title {
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .features {
+        padding-top: 94px;
+        &__list {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        &__icon {
+            display: flex;
+            justify-content: center;
+        }
+        &__title {
+            display: flex;
+        }
+    }
+}

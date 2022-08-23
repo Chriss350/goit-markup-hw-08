@@ -1,0 +1,266 @@
+.footer {
+    background-color: $footerBg;
+    padding: 60px 0;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    &__logo {
+        padding-bottom: 20px;
+    }
+}
+
+.contact {
+    padding: 0 15px;
+    &__address {
+        font-size: 14px;
+        line-height: 1.71428;
+        letter-spacing: 0.03em;
+        font-style: normal;
+        color: $footerTxtMain;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 9px 0;
+
+        &--item {
+            list-style: none;
+        }
+        &--link-mail {
+            color: $footerLinkMain;
+            font-size: 14px;
+            line-height: 1.71428;
+            letter-spacing: 0.03em;
+            text-decoration-line: none;
+            &:hover,
+            &:focus {
+                color: $footerLinkHover;
+                transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+            }
+        }
+        &--link-tel {
+            font-size: 14px;
+            color: $footerLinkMain;
+            line-height: 1.71428;
+            letter-spacing: 0.03em;
+            text-decoration-line: none;
+            &:hover,
+            &:focus {
+                color: $footerLinkHover;
+                transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+            }
+        }
+    }
+}
+
+// .logo {
+//     font-family: "Raleway";
+//     font-weight: 700;
+//     font-size: 26px;
+//     line-height: 1.1923;
+//     letter-spacing: 0.03em;
+//     padding-bottom: 20px;
+//     &__link {
+//         color: $footerLogoCol;
+//         text-decoration: none;
+//         &--2nd-color {
+//             color: $footerLogo2ndCol;
+//         }
+//     }
+// }
+
+.footer-social-media {
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14285;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $footerTxtMain;
+        padding-bottom: 20px;
+    }
+    &__list {
+        list-style: none;
+        gap: 10px;
+        display: flex;
+        &--item {
+            background: $sociaBgColor;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:hover,
+            &:focus {
+                background: $secColor;
+                transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+            }
+            &-link {
+                text-decoration: none;
+                fill: $footerTxtMain;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.newsletter {
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14285;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $footerTxtMain;
+        padding-bottom: 20px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+    &__mail {
+        width: 358px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background: #2f303a;
+        padding: 15px 16px;
+    }
+    &__button {
+        width: 200px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: #ffffff;
+        border: none;
+        background: #2196f3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        gap: 24px;
+        &--icon {
+            fill: #fff;
+        }
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+    .footer {
+        background-color: $footerBg;
+        padding: 60px 0;
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-around;
+            gap: 60px;
+        }
+    }
+
+    .contact {
+        padding: 0 15px;
+        &__address {
+            text-align: center;
+        }
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .footer-social-media {
+        &__title {
+            text-align: center;
+        }
+    }
+    .newsletter {
+        &__title {
+            text-align: center;
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__mail {
+            width: 450px;
+        }
+        &__button {
+            flex-direction: row;
+            margin: 0 auto;
+            &--icon {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer {
+        background-color: $footerBg;
+        padding: 60px 0;
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-around;
+            gap: 60px;
+        }
+    }
+
+    .contact {
+        padding: 0 15px;
+        &__address {
+            text-align: center;
+        }
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .footer-social-media {
+        &__title {
+            text-align: center;
+        }
+    }
+    .newsletter {
+        &__title {
+            text-align: center;
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__mail {
+            width: 450px;
+        }
+        &__button {
+            flex-direction: row;
+            margin: 0 auto;
+            &--icon {
+                fill: #fff;
+            }
+        }
+    }
+}

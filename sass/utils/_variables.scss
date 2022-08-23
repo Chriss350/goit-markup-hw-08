@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+
+//Media Breakpoint
+
+$mediaMaxWidth: 1200px;
+$mediaBp1Width: 768px;
+$mediaMinWidth: 480px;
+
+$MainFontColor: #000;
+$secColor: #2196f3;
+
+$mottoColor: #fff;
+$bgColor: #2f303a;
+
+//Links Colors
+$mainLink: #000;
+$hoverLink: #2196f3;
+$contactColor: #757575;
+$modalLink: #212121;
+
+//Header Colors
+$headerLine: #ececec;
+$menuIcon: #212121;
+
+//Slider Colors
+$sliderBg: #2f303a;
+$sliderOverlay: rgba(47, 48, 58, 0.4);
+$sliderTxt: #fff;
+
+//Advantages Colors
+$advIconBox: #f5f4fa;
+$advTitle: #212121;
+$advDesc: #757575;
+
+//TakeCare Colors
+$tkTxt: #212121;
+$tkLableBg: rgba(47, 48, 58, 0.8);
+$tkLableTxt: #fff;
+
+//Team Colors
+$teamBg: #f5f4fa;
+$teamBoxBg: #fff;
+$teamName: #212121;
+$teamDesc: #757575;
+$teamSmIcon: #afb1b8;
+$teamSmIconHover: #fff;
+$teamSmIconBgHover: #2196f3;
+
+//Clients Colors
+$clientsTxt: #212121;
+$clientsBoarder: #afb1b8;
+$clientsBoarderHover: #2196f3;
+$clientsIcon: #afb1b8;
+$clientsIconHover: #2196f3;
+
+//Portfolio Color
+$portfolioBtnBg: #f5f4fa;
+$portfolioBtnBgHover: #2196f3;
+$portfolioBtnTxt: #fff;
+$portfolioPhotoBg: #fff;
+$portfolioPhotoOverlay: rgba(33, 150, 243, 0.9);
+$portfolioPhotoBorder: #eeeeee;
+$portfolioPhotoTitle: #212121;
+$portfolioPhotoDesc: #757575;
+
+//Footer Colors
+$footerBg: #2f303a;
+$footerLogoCol: #2196f3;
+$footerLogo2ndCol: #fff;
+$footerLinkMain: rgba(255, 255, 255, 0.6);
+$footerLinkHover: #2196f3;
+$footerTxtMain: #fff;
+$sociaBgColor: rgba(255, 255, 255, 0.1);

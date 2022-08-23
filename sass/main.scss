@@ -1,0 +1,120 @@
+@import "utils/variables";
+@import "components/header";
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #2f303a;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+h5,
+h1,
+h2 {
+    margin: 0;
+}
+
+.section {
+    padding: 94px 0;
+}
+
+.button {
+    border: none;
+    background: $hoverLink;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $sliderTxt;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1923;
+    letter-spacing: 0.03em;
+    // padding-bottom: 20px;
+    &__link {
+        color: $footerLogoCol;
+        text-decoration: none;
+        &--header-2nd-color {
+            color: $MainFontColor;
+        }
+        &--footer-2nd-color {
+            color: $footerLogo2ndCol;
+        }
+    }
+}
+
+@import "components/slider";
+@import "components/features";
+@import "components/whatwedo";
+@import "components/ourteam";
+@import "components/clients";
+@import "components/portfolio";
+@import "components/footer";
+@import "components/modal";
+
+@media only screen and (max-width: 767px) {
+    .container {
+        padding: 0 15px;
+        width: 100%;
+    }
+    .section {
+        padding: 60px 0;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        padding: 0 15px;
+        width: 100%;
+    }
+    .section {
+        padding: 60px 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        margin: auto;
+        padding: 0 15px;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #757575;
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2f303a;
+}

@@ -1,0 +1,259 @@
+.modal-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 10;
+    &.in {
+        transform: scale(1);
+        .modal-box__background {
+            background: rgba(0, 0, 0, 0);
+            animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            .form-field {
+                animation: slideIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+            }
+        }
+        &.out {
+            animation: quickScaleDown 0s 0.5s linear forwards;
+            .modal-box__background {
+                animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+                .form-field {
+                    animation: slideOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+                }
+            }
+        }
+    }
+
+    .modal-box__background {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 12;
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+.form-field {
+    width: 528px;
+    min-height: 581px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &__close-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #212121;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__item {
+        list-style: none;
+        position: relative;
+    }
+    &__agreement {
+        list-style: none;
+        padding-top: 20px;
+    }
+
+    &__input-label {
+        font-size: 12px;
+        line-height: 1.16666;
+        letter-spacing: 0.01em;
+        color: #757575;
+        padding-bottom: 4px;
+    }
+    &__input {
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        width: 100%;
+        height: 40px;
+        padding-left: 40px;
+        outline: none;
+        font-size: 12px;
+        line-height: 1.1428;
+        letter-spacing: 0.01em;
+        &-icon {
+            position: absolute;
+            left: 12px;
+            bottom: 11px;
+        }
+        &:active,
+        &:focus,
+        &:hover {
+            border-color: #2196f3;
+            fill: #2196f3;
+            transition-property: border-color, fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        &:active + .form-field__input-icon,
+        &:focus + .form-field__input-icon,
+        &:hover + .form-field__input-icon {
+            border-color: #2196f3;
+            fill: #2196f3;
+            transition-property: border-color, fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+    &__textarea {
+        display: block;
+        width: 100%;
+        height: 120px;
+        resize: none;
+        margin-top: 4px;
+        padding: 12px 16px 12px 16px;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        font-family: inherit;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+        &:active,
+        &:focus,
+        &:hover {
+            border-color: #2196f3;
+        }
+    }
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        width: 15px;
+        height: 16px;
+        transform: translateX(-3px);
+        cursor: pointer;
+        &:checked + .form-field__icon > .form-field__icon {
+            opacity: 1;
+        }
+        &:checked + .form-field__icon > .form-field__icon--unchecked {
+            opacity: 0;
+        }
+    }
+
+    &__label {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: #757575;
+        padding-left: 8px;
+    }
+
+    &__link {
+        color: #2196f3;
+    }
+
+    &__icon--checked {
+        opacity: 0;
+        fill: #2196f3;
+    }
+}
+
+.modal-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+    &__submit {
+        background: #2196f3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        padding: 10px 76px;
+        letter-spacing: 0.06em;
+        color: #ffffff;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes quickScaleDown {
+    0% {
+        transform: scale(1);
+    }
+    99.9% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-1500px) skewX(30deg) scaleX(1.3);
+    }
+    70% {
+        transform: translateX(30px) skewX(0deg) scaleX(0.9);
+    }
+    100% {
+        transform: translateX(0px) skewX(0deg) scaleX(1);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0px) skewX(0deg) scaleX(1);
+    }
+    30% {
+        transform: translateX(-30px) skewX(-5deg) scaleX(0.9);
+    }
+    100% {
+        transform: translateX(1500px) skewX(30deg) scaleX(1.3);
+    }
+}
