@@ -23,7 +23,7 @@
                         <li class="page-header__menu-item"><a href="portfolio.html" class="page-header__link--menu">Portfolio</a></li>
                         <li class="page-header__menu-item"><a href="#" class="page-header__link--menu">Kontakt</a></li>
                     </ul>
-                    <div class="page-header__mobile-bar"><i class="fa-solid fa-bars fa-xl"></i></div>
+                    <div class="page-header__mobile-bar" data-modal-nav-open><i class="fa-solid fa-bars fa-xl"></i></div>
 
                     <ul class="page-header__contact">
                         <li class="page-header__contact-item">
@@ -111,19 +111,19 @@
                     <h2 class="what-we-do__title">Czym się zajmujemy</h2>
                     <ul class="what-we-do__list">
                         <li class="what-we-do__list item">
-                            <img src="images/img_1.jpg" alt="programming" width="370" height="294" />
+                            <img src="images/img_1.jpg" alt="programming" width="370" height="294" srcset="images/img_1.jpg 1x, images/img_1@2x.jpg 2x, images/img_1@3x.jpg 3x" />
                             <div class="what-we-do__list item__label">
                                 <p>Aplikacje komputerowe</p>
                             </div>
                         </li>
                         <li class="what-we-do__list item">
-                            <img src="images/img_2.jpg" alt="mobile apps" width="370" height="294" />
+                            <img src="images/img_2.jpg" alt="mobile apps" width="370" height="294" srcset="images/img_2.jpg 1x, images/img_2@2x.jpg 2x, images/img_2@3x.jpg 3x" />
                             <div class="what-we-do__list item__label">
                                 <p>Aplikacje mobilne</p>
                             </div>
                         </li>
                         <li class="what-we-do__list item">
-                            <img src="images/img_3.jpg" alt="design" width="370" height="294" />
+                            <img src="images/img_3.jpg" alt="design" width="370" height="294" srcset="images/img_3.jpg 1x, images/img_3@2x.jpg 2x, images/img_3@3x.jpg 3x" />
                             <div class="what-we-do__list item__label">
                                 <p>Rozwiązania graficzne</p>
                             </div>
@@ -137,7 +137,7 @@
                     <ul class="our-team__items">
                         <li class="our-team__items--item">
                             <div class="team-card">
-                                <img src="images/img_4.jpg" alt="john doe" width="270" height="260" />
+                                <img src="images/img_4.jpg" alt="john doe" width="270" height="260" srcset="images/img_4.jpg 1x, images/img_4@2x.jpg 2x, images/img_4@3x.jpg 3x" />
                                 <p class="team-card__name">John Doe</p>
                                 <p class="team-card__workplace">Product Designer</p>
                                 <div class="social-media">
@@ -174,7 +174,7 @@
                         </li>
                         <li class="our-team__items--item">
                             <div class="team-card">
-                                <img src="images/img_5.jpg" alt="john doe" width="270" height="260" />
+                                <img src="images/img_5.jpg" alt="john doe" width="270" height="260" srcset="images/img_5.jpg 1x, images/img_5@2x.jpg 2x, images/img_5@3x.jpg 3x" />
                                 <p class="team-card__name">John Doe</p>
                                 <p class="team-card__workplace">Frontend Developer</p>
                                 <div class="social-media">
@@ -213,7 +213,7 @@
                         </li>
                         <li class="our-team__items--item">
                             <div class="team-card">
-                                <img src="images/img_6.jpg" alt="john doe" width="270" height="260" />
+                                <img src="images/img_6.jpg" alt="john doe" width="270" height="260" srcset="images/img_6.jpg 1x, images/img_6@2x.jpg 2x, images/img_6@3x.jpg 3x" />
                                 <p class="team-card__name">John Doe</p>
                                 <p class="team-card__workplace">Marketing</p>
                                 <div class="social-media">
@@ -252,7 +252,7 @@
                         </li>
                         <li class="our-team__items--item">
                             <div class="team-card">
-                                <img src="images/img_7.jpg" alt="john doe" width="270" height="260" />
+                                <img src="images/img_7.jpg" alt="john doe" width="270" height="260" srcset="images/img_7.jpg 1x, images/img_7@2x.jpg 2x, images/img_7@3x.jpg 3x" />
                                 <p class="team-card__name">John Doe</p>
                                 <p class="team-card__workplace">UI Designer</p>
                                 <div class="social-media">
@@ -445,28 +445,30 @@
             </div>
         </div>
 
-        <!-- <div class="modal-contact-container" id="modal-contact-container" style="display: none" data-modal-nav>
-            <button type="button" id="cBtn" data-contact-modal><i class="fa-solid fa-x fa-xl"></i></button>
-            <div class="modal-contact-wrapper">
-                <ul class="menu">
-                    <li class="link"><a href="#">Agencja</a></li>
-                    <li class="link"><a href="#">Portfolio</a></li>
-                    <li class="link"><a href="#">Kontakt</a></li>
-                </ul>
+        <div class="mobile-nav isHidden" id="mobile-nav-container" data-modal-nav>
+            <button type="button" class="mobile-nav__button mobile-nav__button--close" data-modal-nav-close><i class="fa-solid fa-x fa-xl"></i></button>
+            <div class="mobile-nav__box">
+                <div class="mobile-nav__menu">
+                    <ul class="mobile-nav__list">
+                        <li class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Agencja</a></li>
+                        <li class="mobile-nav__item"><a href="portfolio.html" class="mobile-nav__link">Portfolio</a></li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Kontakt</a></li>
+                    </ul>
+                </div>
                 <div class="contacts">
-                    <div class="phone"><a href="tel:+48111111111">+48111111111</a></div>
-                    <div class="mail"><a href="mailto:info@devstudio.com">info@devstudio.com</a></div>
-                    <div class="socialMedia">
-                        <ul class="smItems">
-                            <li class="smItem">Instagram</li>
-                            <li class="smItem">Twitter</li>
-                            <li class="smItem">Facebook</li>
-                            <li class="smItem">LinkedIn</li>
+                    <a href="tel:+48111111111" class="contacts__phone">+48111111111</a>
+                    <a href="mailto:info@devstudio.com" class="contacts__mail">info@devstudio.com</a>
+                    <div class="social-mobile">
+                        <ul class="social-mobile__list">
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">Instagram</a></li>
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">Twitter</a></li>
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">Facebook</a></li>
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <script src="./js/modal.js"></script>
     </body>
 </html>

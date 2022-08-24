@@ -1,6 +1,6 @@
 @import "utils/variables";
 @import "components/header";
-
+@import "components/_mobile-nav";
 * {
     box-sizing: border-box;
 }
@@ -98,23 +98,23 @@ h2 {
     }
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
+// /* width */
+// ::-webkit-scrollbar {
+//     width: 10px;
+// }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #757575;
-    border-radius: 4px;
-}
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: #757575;
+//     border-radius: 4px;
+// }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #2f303a;
-}
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #2f303a;
+// }

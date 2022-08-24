@@ -56,22 +56,6 @@
     }
 }
 
-// .logo {
-//     font-family: "Raleway";
-//     font-weight: 700;
-//     font-size: 26px;
-//     line-height: 1.1923;
-//     letter-spacing: 0.03em;
-//     padding-bottom: 20px;
-//     &__link {
-//         color: $footerLogoCol;
-//         text-decoration: none;
-//         &--2nd-color {
-//             color: $footerLogo2ndCol;
-//         }
-//     }
-// }
-
 .footer-social-media {
     &__title {
         font-weight: 700;
@@ -127,7 +111,6 @@
         gap: 12px;
     }
     &__mail {
-        width: 358px;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
@@ -161,7 +144,7 @@
     }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .footer {
         background-color: $footerBg;
         padding: 60px 0;
@@ -201,7 +184,7 @@
             gap: 20px;
         }
         &__mail {
-            width: 450px;
+            max-width: 450px;
         }
         &__button {
             flex-direction: row;
@@ -261,6 +244,14 @@
             &--icon {
                 fill: #fff;
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .newsletter {
+        &__mail {
+            width: 358px;
         }
     }
 }

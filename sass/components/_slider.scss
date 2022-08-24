@@ -1,7 +1,7 @@
 .slider {
     position: relative;
     z-index: 3;
-    background: $sliderBg url("../images/ImgsliderImg.jpg") no-repeat center;
+    background-size: cover;
     &:after {
         content: "";
         background: $sliderOverlay;
@@ -32,12 +32,25 @@
     }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .slider {
         padding: 118px 0;
+        background: $sliderBg url("../images/mobile-slider.jpg") no-repeat center;
         &__motto {
             font-size: 26px;
             line-height: 1.61538;
+        }
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .slider {
+            background: $sliderBg url("../images/mobile-slider@2x.jpg");
+        }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+        .slider {
+            background: $sliderBg url("../images/mobile-slider@3x.jpg");
         }
     }
 }
@@ -45,9 +58,24 @@
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
     .slider {
         padding: 118px 0;
+        height: 100%;
+        background: $sliderBg url("../images/tablet-slider.jpg") no-repeat center;
+
         &__motto {
             font-size: 26px;
             line-height: 1.61538;
+        }
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .slider {
+            background: $sliderBg url("../images/tablet-slider@2x.jpg");
+        }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+        .slider {
+            background: $sliderBg url("../images/tablet-slider@3x.jpg");
         }
     }
 }
@@ -55,9 +83,24 @@
 @media only screen and (min-width: 1200px) {
     .slider {
         padding: 200px 0;
+        height: 100%;
+        background: $sliderBg url("../images/desktop-slider.jpg") no-repeat center;
+
         &__motto {
             font-size: 44px;
             line-height: 1.36363;
+        }
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .slider {
+            background: $sliderBg url("../images/desktop-slider@2x.jpg");
+        }
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+        .slider {
+            background: $sliderBg url("../images/desktop-slider@3x.jpg");
         }
     }
 }

@@ -50,7 +50,6 @@
     border: none;
     overflow: hidden;
     margin: 0;
-    flex-basis: calc((100% - (2 * 30px)) / 3);
     width: 100%;
     height: 100%;
     &:hover .portfolio-card__overlay {
@@ -63,7 +62,6 @@
         border-bottom: 1px solid $portfolioPhotoBorder;
         border-right: 1px solid $portfolioPhotoBorder;
         background-color: $portfolioPhotoBg;
-
         padding: 0;
         margin: 0;
         overflow: hidden;
@@ -71,6 +69,7 @@
     & img {
         display: block;
         min-width: 100%;
+        height: auto;
     }
     &__overlay {
         position: absolute;
@@ -108,10 +107,11 @@
         color: $portfolioPhotoDesc;
         padding-left: 24px;
         padding-top: 4px;
+        padding-bottom: 20px;
     }
 }
 
-@media only screen and (min-width: 380px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .portfolio-card {
         flex-basis: calc(100% / 1);
     }
