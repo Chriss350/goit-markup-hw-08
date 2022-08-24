@@ -277,6 +277,13 @@
   display: none;
 }
 
+.color {
+  color: #212121;
+}
+.color:hover {
+  color: #2196f3;
+}
+
 * {
   box-sizing: border-box;
 }
