@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>WebStudio</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+        <link rel="stylesheet" href="css/main.min.css" />
     </head>
     <body>
         <header class="page-header">
@@ -22,7 +23,7 @@
                         <li class="page-header__menu-item active"><a href="portfolio.html" class="page-header__link--menu">Portfolio</a></li>
                         <li class="page-header__menu-item"><a href="#" class="page-header__link--menu">Kontakt</a></li>
                     </ul>
-                    <div class="page-header__mobile-bar"><i class="fa-solid fa-bars fa-xl"></i></div>
+                    <div class="page-header__mobile-bar" data-modal-nav-open><i class="fa-solid fa-bars fa-xl"></i></div>
 
                     <ul class="page-header__contact">
                         <li class="page-header__contact-item">
@@ -236,5 +237,31 @@
                 </div>
             </div>
         </div>
+
+        <div class="mobile-nav isHidden" id="mobile-nav-container" data-modal-nav>
+            <button type="button" class="mobile-nav__button mobile-nav__button--close" data-modal-nav-close><i class="fa-solid fa-x fa-xl"></i></button>
+            <div class="mobile-nav__box">
+                <div class="mobile-nav__menu">
+                    <ul class="mobile-nav__list">
+                        <li class="mobile-nav__item"><a href="index.html" class="mobile-nav__link">Agencja</a></li>
+                        <li class="mobile-nav__item"><a href="portfolio.html" class="mobile-nav__link">Portfolio</a></li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="contacts">
+                    <a href="tel:+48111111111" class="contacts__phone">+48111111111</a>
+                    <a href="mailto:info@devstudio.com" class="contacts__mail">info@devstudio.com</a>
+                    <div class="social-mobile">
+                        <ul class="social-mobile__list">
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">Instagram</a></li>
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">Twitter</a></li>
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">Facebook</a></li>
+                            <li class="social-mobile__item"><a href="" class="social-mobile__link">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/nav.js"></script>
     </body>
 </html>
