@@ -5,7 +5,7 @@
     align-items: center;
 
     &__logo {
-        padding: 24px 0px;
+        padding: 16px 0px;
     }
 
     &__navigation {
@@ -13,6 +13,19 @@
         justify-content: space-between;
     }
 
+    &__mobile-bar {
+        display: flex;
+        height: 60px;
+        align-items: center;
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    &__contact {
+        display: none;
+    }
     &__link {
         &--menu {
             text-decoration: none;
@@ -43,28 +56,6 @@
                 color: $hoverLink;
                 fill: $hoverLink;
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .page-header {
-        &__mobile-bar {
-            display: flex;
-            height: 60px;
-            align-items: center;
-        }
-
-        &__logo {
-            padding: 16px 0px;
-        }
-
-        &__menu {
-            display: none;
-        }
-
-        &__contact {
-            display: none;
         }
     }
 }
@@ -135,6 +126,7 @@
         }
     }
 }
+
 @media only screen and (min-width: 1200px) {
     .page-header {
         border-bottom: 1px solid $headerLine;
@@ -145,6 +137,11 @@
         &__left-side {
             display: flex;
         }
+
+        &__logo {
+            padding: 24px 0px;
+        }
+
         &__right-side {
             width: 100%;
             display: flex;

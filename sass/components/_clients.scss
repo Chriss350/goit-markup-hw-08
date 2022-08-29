@@ -12,7 +12,13 @@
     }
     &__items {
         list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
         &--item {
+            flex-basis: calc((100% - (1 * 30px)) / 2);
             border: 1px solid $clientsBoarder;
             border-radius: 4px;
             width: 170px;
@@ -24,21 +30,6 @@
             &:hover {
                 border: 1px solid $clientsBoarderHover;
                 fill: $clientsIconHover;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .our-clients {
-        &__items {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            &--item {
-                flex-basis: calc((100% - (1 * 30px)) / 2);
             }
         }
     }
@@ -64,6 +55,7 @@
         &__items {
             display: flex;
             flex-direction: row;
+            flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
             gap: 30px;

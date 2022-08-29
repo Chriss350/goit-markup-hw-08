@@ -1,7 +1,10 @@
 .features {
     width: 100%;
-    padding-top: 94px;
+    padding-top: 60px;
     &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         &--item {
             list-style: none;
         }
@@ -11,10 +14,14 @@
 .feature {
     font-size: 14px;
     letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: column;
     &__icon {
         padding: 25px 100px;
         background: $advIconBox;
         border-radius: 4px;
+        display: flex;
+        justify-content: center;
     }
     &__title {
         font-weight: 700;
@@ -22,35 +29,13 @@
         text-transform: uppercase;
         margin-top: 30px;
         color: $advTitle;
+        display: flex;
+        justify-content: center;
     }
     &__desc {
         margin-top: 10px;
         line-height: 1.71;
         color: $advDesc;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .features {
-        padding-top: 60px;
-        &__list {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-    }
-
-    .feature {
-        display: flex;
-        flex-direction: column;
-        &__icon {
-            display: flex;
-            justify-content: center;
-        }
-        &__title {
-            display: flex;
-            justify-content: center;
-        }
     }
 }
 
@@ -60,6 +45,7 @@
         &__list {
             display: flex;
             flex-wrap: wrap;
+            flex-direction: row;
             gap: 30px;
             &--item {
                 flex-basis: calc((100% - 30px) / 2);

@@ -1,11 +1,14 @@
 .footer {
     background-color: $footerBg;
+    text-align: center;
     padding: 60px 0;
     &__content {
         display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
     }
     &__logo {
         padding-bottom: 20px;
@@ -13,7 +16,6 @@
 }
 
 .contact {
-    padding: 0 15px;
     &__address {
         font-size: 14px;
         line-height: 1.71428;
@@ -22,14 +24,13 @@
         color: $footerTxtMain;
     }
     &__list {
+        list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 9px 0;
-
-        &--item {
-            list-style: none;
-        }
-        &--link-mail {
+        gap: 8px;
+    }
+    &__link {
+        &--mail {
             color: $footerLinkMain;
             font-size: 14px;
             line-height: 1.71428;
@@ -41,7 +42,7 @@
                 transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
             }
         }
-        &--link-tel {
+        &--phone {
             font-size: 14px;
             color: $footerLinkMain;
             line-height: 1.71428;
@@ -68,34 +69,40 @@
     }
     &__list {
         list-style: none;
-        gap: 10px;
         display: flex;
-        &--item {
-            background: $sociaBgColor;
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            &:hover,
-            &:focus {
-                background: $secColor;
-                transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-            }
-            &-link {
-                text-decoration: none;
-                fill: $footerTxtMain;
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-            }
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__item {
+        background: $sociaBgColor;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background: $secColor;
+            transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
         }
+    }
+    &__link {
+        text-decoration: none;
+        fill: $footerTxtMain;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     &__title {
         font-weight: 700;
         font-size: 14px;
@@ -107,10 +114,15 @@
     }
     &__form {
         display: flex;
-        flex-direction: row;
-        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
     }
+
     &__mail {
+        max-width: 450px;
+        width: 100%;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
@@ -122,11 +134,13 @@
         background: #2f303a;
         padding: 15px 16px;
     }
+
     &__button {
-        width: 200px;
+        max-width: 200px;
         height: 50px;
         justify-content: center;
         align-items: center;
+        flex-direction: row;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
@@ -144,112 +158,51 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) and (max-width: 1199px) {
     .footer {
-        background-color: $footerBg;
-        padding: 60px 0;
         &__content {
-            display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            align-items: baseline;
-            justify-content: space-around;
-            gap: 60px;
-        }
-    }
-
-    .contact {
-        padding: 0 15px;
-        &__address {
-            text-align: center;
-        }
-    }
-
-    .logo {
-        text-align: center;
-    }
-
-    .footer-social-media {
-        &__title {
-            text-align: center;
-        }
-    }
-    .newsletter {
-        &__title {
-            text-align: center;
-        }
-        &__form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        &__mail {
-            max-width: 450px;
-        }
-        &__button {
-            flex-direction: row;
-            margin: 0 auto;
-            &--icon {
-                fill: #fff;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .footer {
-        background-color: $footerBg;
-        padding: 60px 0;
-        &__content {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: space-around;
-            gap: 60px;
-        }
-    }
-
-    .contact {
-        padding: 0 15px;
-        &__address {
-            text-align: center;
-        }
-    }
-
-    .logo {
-        text-align: center;
-    }
-
-    .footer-social-media {
-        &__title {
-            text-align: center;
-        }
-    }
-    .newsletter {
-        &__title {
-            text-align: center;
-        }
-        &__form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        &__mail {
-            width: 450px;
-        }
-        &__button {
-            flex-direction: row;
-            margin: 0 auto;
-            &--icon {
-                fill: #fff;
-            }
+            justify-content: space-evenly;
         }
     }
 }
 
 @media only screen and (min-width: 1200px) {
+    .footer {
+        text-align: left;
+        &__content {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-around;
+            gap: 70px;
+        }
+    }
+    .contact {
+        min-width: 246px;
+        &__address {
+            min-width: 100%;
+        }
+    }
+    .footer-social-media {
+        padding-right: 18px;
+        &__list {
+            justify-content: flex-start;
+        }
+    }
     .newsletter {
+        width: 100%;
+        &__title {
+            text-align: left;
+            width: 100%;
+        }
+        &__form {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            width: 100%;
+        }
         &__mail {
             width: 358px;
         }
